@@ -12,21 +12,21 @@ interface BookType {
   comment: string;
 }
 
-// Data buku hardcode sesuai permintaan
+// Data book
 const myBooks: BookType[] = [
     { 
       id: 1, 
       title: "Renegade Immortal", 
       author: "Er Gen", 
       cover: "/book/xiani.webp", 
-      comment: "Perjalanan Wang Lin di jalan immortal." 
+      comment: "Wang Lin's journey on the immortal path." 
     },
     { 
       id: 2, 
       title: "I Shall Seal the Heavens", 
       author: "Er Gen", 
       cover: "/book/issth.webp", 
-      comment: "Meng Hao, si Cendekiawan penipu." 
+      comment: "Meng Hao, The fraudulent scholar." 
     },
     { 
       id: 3, 
@@ -34,6 +34,13 @@ const myBooks: BookType[] = [
       author: "Cuttlefish That Loves Diving", 
       cover: "/book/lotm.jpg", 
       comment: "Praise The Fool!" 
+    },
+    { 
+      id: 4, 
+      title: "A will eternal", 
+      author: "Er Gen", 
+      cover: "/book/awe.webp", 
+      comment: "A human who wants to be immortal" 
     },
 ];
 
@@ -83,7 +90,7 @@ const BookBoard = () => {
                     <Book key={book.id} onClick={() => setSelectedBook(book)} />
                 ))}
                 <div>
-                    <Image src="/flowerpot.png" alt="flowerpot" width={90} height={38} />
+                    <Image src="/book/flowerpot.png" alt="flowerpot" width={90} height={38} />
                 </div>
                 </div>
             </div>
