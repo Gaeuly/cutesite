@@ -90,7 +90,7 @@ const Recommend = () => {
                     <input
                         type="text"
                         value={newTitle}
-                        onChange={(e) => setNewTitle(e.g.target.value)}
+                        onChange={(e) => setNewTitle(eg.target.value)}
                         className="flex-1 border-2 border-rosewood px-2 py-1 bg-light-pink"
                         placeholder="Add new recommendation..."
                     />
