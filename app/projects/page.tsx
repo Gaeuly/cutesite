@@ -1,7 +1,7 @@
 'use client';
 
 import ProjectCard from "../../components/ProjectCard";
-import { allProjects } from "../../data/projectData";
+import { allProjects } from "../data/projectData";
 
 const ProjectsFull = () => {
   return (
