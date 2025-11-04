@@ -22,7 +22,7 @@ export default function Blog() {
       });
   
   return (
-    <div className="min-h-screen max-w-2xl mx-auto px-4 flex flex-col items-center">
+    <div className="max-w-2xl mx-auto px-4 flex flex-col items-center pb-32">
       <h1 className="font-jersey font-bold text-5xl py-12">Blog</h1>
       <p className="font-pixelify text-center leading-relaxed pb-12">
         Notes and tutorials about my journey as a Discord Bot Developer and managing Minecraft servers. 🤖⛏️

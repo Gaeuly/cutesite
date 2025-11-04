@@ -5,7 +5,7 @@ import Button from "../components/Button";
 
 const Projects = () => {
   return (
-    <div className="min-h-screen max-w-5xl mx-auto px-4 flex flex-col items-center">
+    <div className="max-w-5xl mx-auto px-4 flex flex-col items-center pb-32">
       <h1 className="font-jersey font-bold text-5xl py-12">Projects</h1>
       <p className="leading-relaxed text-center font-pixelify">
         A little collection of projects I have been building, designing and
