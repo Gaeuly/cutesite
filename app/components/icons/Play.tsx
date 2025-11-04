@@ -1,19 +1,21 @@
-import Image from "next/image";
+import React from 'react';
 
-
-interface PlayProps {
-  url: string;
+interface IconProps extends React.SVGProps<SVGSVGElement> {
+  className?: string;
 }
 
+const Play: React.FC<IconProps> = ({ className = 'w-6 h-6', ...props }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      {...props}
+    >
+      <path d="M 8 5 V 19 L 19 12 Z" />
+    </svg>
+  );
+};
 
-const Play: React.FC<PlayProps> = ({ url }) => {
-    return (  
-        <a href={url} target="_blank" rel="noopener noreferrer" >
-            <Image src="/play.png" alt="play button" width={32} height={32}
-                className="hover:opacity-30 transition"
-            />
-        </a>
-    );
-}
- 
 export default Play;

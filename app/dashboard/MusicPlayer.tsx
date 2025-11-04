@@ -10,9 +10,9 @@ import Play from "../components/icons/Play";
 
 const MusicPlayer = () => {
     const songs = [
-        { title: "Nod Krai Theme", artist: "Aurora", url: "https://youtu.be/RuXa_yxZMGI?si=KL1ezMZpqlJYN9ew", cover: "/aurora.avif"},
-        { title: "My Way", artist: "KATSEYE", url: "https://youtu.be/1P8BbTY8gWo?si=_GPfk2cFmIXiAT7C", cover: "/katseye.jpg"},
-        { title: "Forbidden Friendship", artist: "John Powell", url: "https://youtu.be/96NgGuKQcmo?si=UHYxF9EAiPZa2p_h", cover: "/httyd.jpg"},
+        { title: "7 Years", artist: "Lukas Graham", url: "https://youtu.be/LHCob76kigA?si=0UnQRxGE39kGa4cg", cover: "/music/7years.jpg"},
+        { title: "We Don't Talk Anymore", artist: "Charlie Puth", url: "https://youtu.be/3AtDnEC4zak?si=MYtKyR_IhcRLFaqW", cover: "/music/anymore.jpg"},
+        { title: "Stan", artist: "Eminem", url: "https://youtu.be/gOMhN-hfMtY?si=L7ddgAsbGItZuRv0", cover: "/music/stan.jpg"},
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -30,10 +30,8 @@ const MusicPlayer = () => {
                 <span className="w-2 h-2 bg-mauve-brown border border-plum-brown"></span>
             </div>
             <div className="p-3">
-                {/* Album Art */}
                 <h2 className="text-lg font-bold mb-2">Now Playing</h2>
 
-                {/* Animate cover art + text */}
                 <div className="h-auto flex items-center justify-center mb-3 overflow-hidden">
                     <AnimatePresence mode="wait">
                     <motion.div
@@ -48,6 +46,8 @@ const MusicPlayer = () => {
                             src={songs[currentIndex].cover}
                             alt={songs[currentIndex].title}
                             className="w-42 h-42 mx-auto object-cover image-pixelated border-2 border-mauve-brown"
+                            width={168}
+                            height={168}
                         />
                         <p className="mt-2 text-sm">{songs[currentIndex].title}</p>
                         <p className="text-xs text-pink-800">{songs[currentIndex].artist}</p>
@@ -55,12 +55,10 @@ const MusicPlayer = () => {
                     </AnimatePresence>
                 </div>
 
-                {/* Progress bar */}
                 <div className="mt-3 h-2 w-full border-2 border-plum-brown bg-rosewood relative">
                     <div className="h-full bg-raspberry" style={{ width: "40%" }}></div>
                 </div>
 
-                {/* Button controls */}
                 <div className="flex justify-center gap-3 items-center py-5">
                     <button onClick={handlePrev} className="px-2 py-1hover:translate-y-[2px]"> <Backward /> </button>
                     <Play url={currentSong.url}/>

@@ -37,7 +37,7 @@ export default function Navbar() {
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <Sidebar backgroundColor="#EEC8CF" className="h-full">
+        <Sidebar backgroundColor="#dcd0ff" className="h-full">
           {/* Close button */}
           <button
             className="absolute top-4 left-4 text-black text-xl font-bold"
