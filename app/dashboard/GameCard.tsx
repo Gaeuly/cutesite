@@ -16,8 +16,8 @@ const GameCard = () => {
                         <div>
                             <p>Main:</p>
                             <Image
-                                src="/sera.jpg"
-                                alt="seraphine"
+                                src="/hero.jpg"
+                                alt="layla"
                                 width={200}
                                 height={200}
                                 className="object-cover w-500px] h-[100px]"
@@ -26,8 +26,8 @@ const GameCard = () => {
                         <div>
                             <p>Favourite skin:</p>
                             <Image
-                                src="/seradove.jpg"
-                                alt="seraphine"
+                                src="/skin.jpg"
+                                alt="myskin"
                                 width={200}
                                 height={200}
                                 className="object-cover w-[290px] h-[100px]"
