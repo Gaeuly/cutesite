@@ -11,7 +11,7 @@ const GameCard = () => {
             <div className="p-3">
                 <h1 className="text-lg font-bold mb-2">Games Played</h1>
                 <div className="border-b-2 border-raspberry py-2">
-                    <h2 className="font-bold">League of Legends</h2>
+                    <h2 className="font-bold">Mobile Legends</h2>
                     <div className=" grid grid-cols-2">
                         <div>
                             <p>Main:</p>
