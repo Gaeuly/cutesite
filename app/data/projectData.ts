@@ -67,7 +67,7 @@ export const allProjects: Project[] = [
     slug: 'hosting-service',
     title: 'Hosting Service',
     description:
-      'A modern web hosting solution designed for deploying and managing Discord Bots, Minecraft Servers, VPS, & Lavalink. It supports static sites and dynamic applications with automatic SSL, custom domains, and a global CDN built for performance and scalability.',
+      'A modern web hosting solution designed for deploying and managing Discord Bots, Minecraft Servers, VPS, & Lavalink.',
     longDescription:
       'A modern web hosting solution designed to make deploying and managing Bot Discord, Minecraft Game, VPS, & Lavalink. Supports static sites and dynamic applications with automatic SSL, custom domains, and global CDN. Built for performance, scalability, and simplicity.',
     technologies: [
@@ -113,7 +113,7 @@ export const allProjects: Project[] = [
     slug: 'nimenation',
     title: 'Nimenation',
     description:
-      'Nimenation is a modern and dynamic web platform built to help Discord communities showcase their servers in an elegant and interactive way. It offers a sleek landing interface, real-time server information, community stats, and easy access for new members — all wrapped in a clean, futuristic design optimized for both desktop and mobile users.',
+      'Nimenation is a modern and dynamic web platform built to help Discord communities showcase their servers in an elegant and interactive way.',
     longDescription:
       'Nimenation is a powerful and modern web platform designed to provide an elegant hub for Discord server communities. It allows server owners to showcase their server’s identity through interactive sections, custom branding, and dynamic features that highlight community activities. Built using TypeScript, Angular, Vite, JavaScript, Firebase, and Supabase, Nimenation focuses on performance, scalability, and a seamless user experience.',
     technologies: [
