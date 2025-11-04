@@ -1,26 +1,31 @@
-import { useEffect } from "react";
-import { supabase } from "@/lib/supabaseClient";
+// import { useEffect } from "react"; // Dinonaktifkan karena useEffect tidak dipakai
+// import { supabase } from "@/lib/supabaseClient"; // Dinonaktifkan
 import { useState } from "react";
 
 
+// Interface ini bisa kita nonaktifkan juga karena datanya gak di-load
+/*
 interface RecommendType {
     id: number;
     name: string;
     comment: string;
 }
+*/
 
 const Recommend = () => {
-    const [recommendList, setRecommendList] = useState<RecommendType[]>([]);
+    // tipenya jadi any[] dan biarkan kosong
+    const [recommendList, setRecommendList] = useState<any[]>([]);
     const [newTitle, setNewTitle] = useState("");
     const [newComment, setNewComment] = useState("");
-    const [loading, setLoading] = useState(true);
+    // const [loading, setLoading] = useState(true);
 
-    // Fetch data
+    /*
+    // Fetch data - Dinonaktifkan
     useEffect(() => {
         const fetchRecommendations = async () => {
         const { data, error } = await supabase
-            .schema("SyePhasuk") // 
-            .from("Recommend") // 
+            .schema("SyePhasuk") 
+            .from("Recommend") 
             .select("*");
 
         if (error) {
@@ -33,8 +38,10 @@ const Recommend = () => {
 
         fetchRecommendations();
     }, []);
+    */
 
-    // Insert new data
+    /*
+    // Insert new data - Dinonaktifkan 
     const addRecommendation = async () => {
         const { data, error } = await supabase
             .schema("SyePhasuk")
@@ -50,10 +57,12 @@ const Recommend = () => {
             setNewComment("");
         }
     };
+    */
 
-    if (loading) {
-        return <p className="text-center text-gray-500">Loading recommendations...</p>;
-    }
+    // if (loading) {
+    //     return <p className="text-center text-gray-500">Loading recommendations...</p>;
+    // }
+
     return (  
         <div className="bg-light-pink border-4 border-raspberry shadow-[4px_4px_0px_#412722] transition-all hover:shadow-[6px_6px_0px_#AE5969] font-pixelify">
             <div className="flex gap-1 justify-end p-1 bg-rosewood">
@@ -63,7 +72,6 @@ const Recommend = () => {
             </div>
             <div className="p-3">
                 <h1 className="text-lg font-bold mb-2">TBR/TBW</h1>
-                {/* Render fetched list */}
                 <ul className="space-y-1 py-2">
                 {recommendList.map((rec) => (
                     <li key={rec.id} className="border-b border-rosewood/40 pb-1">
@@ -72,7 +80,8 @@ const Recommend = () => {
                 ))}
 
                 <p className="mt-4">Feel free to give me some recommendations!</p>
-                <div className="flex gap-2 mb-3">
+                
+                <div className="flex flex-col md:flex-row gap-2 mb-3">
                     <input
                         type="text"
                         value={newTitle}
@@ -88,8 +97,9 @@ const Recommend = () => {
                         placeholder="Add your comments..."
                     />
                     <button
-                        onClick={addRecommendation}
-                        className="px-3 py-1 bg-rosewood text-light-pink border-2 border-plum-brown hover:bg-rosewood/80"
+                        // onClick={addRecommendation} // onClick dinonaktifkan
+                        disabled // Tombol jadi disabled
+                        className="px-3 py-1 bg-rosewood text-light-pink border-2 border-plum-brown hover:bg-rosewood/80 disabled:opacity-50"
                     >
                         Add
                     </button>

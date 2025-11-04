@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { useState } from "react";
 import Book from "../components/Book";
-import { supabase } from "@/lib/supabaseClient";
-import { useEffect } from "react";
+// import { supabase } from "@/lib/supabaseClient"; // Dinonaktifkan
+// import { useEffect } from "react"; // Dinonaktifkan
 
 interface BookType {
   id: number;
@@ -12,13 +12,39 @@ interface BookType {
   comment: string;
 }
 
-const Dashboard = () => {
-    // The whole bookshelf - db for all books
-    const [books, setBooks] = useState<BookType[]>([]);
-    // For what book is selected and rendered 
+// Data buku hardcode sesuai permintaan
+const myBooks: BookType[] = [
+    { 
+      id: 1, 
+      title: "Renegade Immortal", 
+      author: "Er Gen", 
+      cover: "/book/xiani.webp", 
+      comment: "Perjalanan Wang Lin di jalan immortal." 
+    },
+    { 
+      id: 2, 
+      title: "I Shall Seal the Heavens", 
+      author: "Er Gen", 
+      cover: "/book/issth.webp", 
+      comment: "Meng Hao, si Cendekiawan penipu." 
+    },
+    { 
+      id: 3, 
+      title: "Lord of the Mysteries", 
+      author: "Cuttlefish That Loves Diving", 
+      cover: "/book/lotm.jpg", 
+      comment: "Praise The Fool!" 
+    },
+];
+
+const BookBoard = () => {
+    // Langsung isi state dengan data hardcode
+    const [books, setBooks] = useState<BookType[]>(myBooks);
+    // Untuk buku yang dipilih
     const [selectedBook, setSelectedBook] = useState<BookType | null>(null);
 
-    // Fetch data on mount
+    /*
+    // Fetch data on mount - Dinonaktifkan
     useEffect(() => {
         const fetchBooks = async () => {
         const { data, error } = await supabase
@@ -35,6 +61,7 @@ const Dashboard = () => {
 
         fetchBooks();
     }, []);
+    */
     
     return (  
         
@@ -97,4 +124,4 @@ const Dashboard = () => {
     );
 }
  
-export default Dashboard;
+export default BookBoard;

@@ -12,7 +12,7 @@ import Image from "next/image";
 const Dashboard = () => {
   return (
     <div className="min-h-screen max-w-4xl mx-auto px-4 flex flex-col items-center pb-16">
-        <h1 className="font-jersey font-bold text-5xl pt-24 pb-6">Dashbaord</h1>
+        <h1 className="font-jersey font-bold text-5xl pt-24 pb-6">Dashboard</h1>
 
         {/* Introduction */}
         <div className="font-pixelify bg-light-pink border-4 border-rosewood shadow-[4px_4px_0px_#412722] pb-6">
