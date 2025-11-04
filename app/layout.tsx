@@ -1,4 +1,4 @@
-
+import type { Metadata } from 'next'
 import "./globals.css";
 import NavBar from "./sections/NavBar";
 import Footer from "./sections/Footer";
@@ -18,12 +18,18 @@ const jersey = Jersey_10({
   variable: "--font-jersey",
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "gaeuly",
   description: "Portfolio",
   icons: {
-    icon: "/favicon.png", 
+    icon: [
+      { url: '/favicon/favicon.ico', rel: 'icon' },
+      { url: '/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: '/favicon/apple-touch-icon.png',
   },
+  manifest: '/favicon/site.webmanifest',
 };
 
 export default function RootLayout({

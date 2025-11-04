@@ -13,7 +13,7 @@ const Contact = () => {
       </p>
       <div className="mt-12 flex flex-wrap gap-5">
         <a
-          href="#"
+          href="https://github.com/Gaeuly"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub Profile"
@@ -31,7 +31,7 @@ const Contact = () => {
           <Youtube className="w-8 h-8" />
         </a>
         <a
-          href="#"
+          href="https://discord.gg/FnEe7xcYZQ"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Discord Server"

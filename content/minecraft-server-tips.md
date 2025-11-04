@@ -87,3 +87,32 @@ Plugin	Purpose
 - 💡 Keep your plugin list clean and updated regularly.
 
 ---
+
+## 👥 Community Management Tips
+
+- Running a great server isn’t just about code — it’s about people.
+- Create a clear set of rules and pin them on Discord or in-game.
+- Encourage friendly behavior and fair play.
+- Appoint trusted moderators to handle issues when you’re offline.
+- Use bots (like a Discord bot) to sync server updates or player stats.
+
+---
+
+## 🧰 Advanced Setup (Optional)
+
+- If you’re ready to go pro, consider:
+- Hosting on a VPS or dedicated server for better performance.
+- Setting up a custom domain (e.g. play.yourserver.com).
+- Using Docker to containerize your server for easy deployment.
+- Adding a proxy like Velocity or BungeeCord for multiple servers.
+
+---
+
+## 🔗 Useful Resources
+
+- PaperMC Downloads
+- SpigotMC Plugin Hub
+- Minecraft Server Setup Guide (Official)
+- LuckPerms Wiki
+
+---
