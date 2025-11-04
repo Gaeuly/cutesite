@@ -15,7 +15,7 @@ const Projects = () => {
       <div className="mt-12 flex flex-wrap gap-10 justify-center">
         <div
           onClick={() =>
-            window.open("https://gaeuly.xyz/", "_blank")
+            window.open("https://moonveil.cyou/", "_blank")
           }
           className="cursor-pointer"
         >
@@ -23,7 +23,7 @@ const Projects = () => {
             title="Moonveil"
             description="An advanced all-in-one Discord bot packed with powerful features, designed for both utility and entertainment."
             skills={['Discord.js', 'MongoDB', 'JavaScript', 'Shell', 'Supabase']}
-            image="/moonveil.webp"
+            image="/project/moonveil.webp"
             git="https://github.com/Gaeuly/"
           />
         </div>
@@ -37,7 +37,7 @@ const Projects = () => {
             title="Discord Website Bot"
             description="A comprehensive Discord bot with advanced moderation, custom commands, and community engagement features."
             skills={['Next.js', 'Node.js', 'MongoDB']}
-            image="/discord.webp"
+            image="/project/discord.webp"
             git="https://github.com/Gaeuly"
           />
         </div>
