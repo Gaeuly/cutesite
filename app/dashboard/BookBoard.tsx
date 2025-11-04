@@ -39,7 +39,8 @@ const myBooks: BookType[] = [
 
 const BookBoard = () => {
     // Langsung isi state dengan data hardcode
-    const [books, setBooks] = useState<BookType[]>(myBooks);
+    // 'setBooks' dihapus karena tidak terpakai (fix warning)
+    const [books] = useState<BookType[]>(myBooks);
     // Untuk buku yang dipilih
     const [selectedBook, setSelectedBook] = useState<BookType | null>(null);
 
@@ -55,7 +56,7 @@ const BookBoard = () => {
         if (error) {
             console.error("Error fetching books:", error);
         } else {
-            setBooks(data || []);
+            setBooks(data || []); // Ini biang kerok warning-nya
         }
         };
 

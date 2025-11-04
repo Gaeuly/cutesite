@@ -3,18 +3,19 @@
 import { useState } from "react";
 
 
-// Interface ini bisa kita nonaktifkan juga karena datanya gak di-load
-/*
+// Interface ini kita balikin lagi biar gak error 'any'
+// tapi datanya tetep gak kita load dari supabase
 interface RecommendType {
     id: number;
     name: string;
     comment: string;
 }
-*/
+
 
 const Recommend = () => {
-    // tipenya jadi any[] dan biarkan kosong
-    const [recommendList, setRecommendList] = useState<any[]>([]);
+    // Kita pake RecommendType[] biar gak error 'any'
+    // dan hapus 'setRecommendList' karena gak dipake (fix warning)
+    const [recommendList] = useState<RecommendType[]>([]);
     const [newTitle, setNewTitle] = useState("");
     const [newComment, setNewComment] = useState("");
     // const [loading, setLoading] = useState(true);
@@ -31,7 +32,7 @@ const Recommend = () => {
         if (error) {
             console.error("Error fetching recommendations:", error);
         } else {
-            setRecommendList(data || []);
+            setRecommendList(data || []); // Ini biang kerok warning-nya
         }
         setLoading(false);
         };
@@ -52,7 +53,7 @@ const Recommend = () => {
         if (error) {
             console.error("Error inserting recommendation:", error);
         } else {
-            setRecommendList((prev) => [...prev, ...(data || [])]);
+            setRecommendList((prev) => [...prev, ...(data || [])]); // Ini juga
             setNewTitle("");
             setNewComment("");
         }
@@ -81,18 +82,22 @@ const Recommend = () => {
 
                 <p className="mt-4">Feel free to give me some recommendations!</p>
                 
+                {/* INI YANG DIUBAH: 
+                  flex-col (default, untuk mobile) 
+                  md:flex-row (untuk tablet ke atas)
+                */}
                 <div className="flex flex-col md:flex-row gap-2 mb-3">
                     <input
                         type="text"
                         value={newTitle}
-                        onChange={(e) => setNewTitle(e.target.value)}
+                        onChange={(e) => setNewTitle(e.g.target.value)}
                         className="flex-1 border-2 border-rosewood px-2 py-1 bg-light-pink"
                         placeholder="Add new recommendation..."
                     />
                     <input
                         type="text"
                         value={newComment}
-                        onChange={(e) => setNewComment(e.target.value)}
+                        onChange={(e) => setNewComment(e.g.target.value)}
                         className="flex-1 border-2 border-rosewood px-2 py-1 bg-light-pink"
                         placeholder="Add your comments..."
                     />
