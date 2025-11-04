@@ -19,7 +19,7 @@ const jersey = Jersey_10({
 });
 
 export const metadata = {
-  title: "Sye Phasuk",
+  title: "gaeuly",
   description: "Portfolio",
   icons: {
     icon: "/favicon.png", 
