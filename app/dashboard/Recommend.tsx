@@ -82,22 +82,21 @@ const Recommend = () => {
 
                 <p className="mt-4">Feel free to give me some recommendations!</p>
                 
-                {/* INI YANG DIUBAH: 
-                  flex-col (default, untuk mobile) 
+                {/* flex-col (default, untuk mobile) 
                   md:flex-row (untuk tablet ke atas)
                 */}
                 <div className="flex flex-col md:flex-row gap-2 mb-3">
                     <input
                         type="text"
                         value={newTitle}
-                        onChange={(e) => setNewTitle(eg.target.value)}
+                        onChange={(e) => setNewTitle(e.target.value)}
                         className="flex-1 border-2 border-rosewood px-2 py-1 bg-light-pink"
                         placeholder="Add new recommendation..."
                     />
                     <input
                         type="text"
                         value={newComment}
-                        onChange={(e) => setNewComment(e.g.target.value)}
+                        onChange={(e) => setNewComment(e.target.value)}
                         className="flex-1 border-2 border-rosewood px-2 py-1 bg-light-pink"
                         placeholder="Add your comments..."
                     />
