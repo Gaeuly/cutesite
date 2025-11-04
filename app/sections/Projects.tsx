@@ -23,7 +23,7 @@ const Projects = () => {
             title="Moonveil"
             description="An advanced all-in-one Discord bot packed with powerful features, designed for both utility and entertainment."
             skills={['Discord.js', 'MongoDB', 'JavaScript', 'Shell', 'Supabase']}
-            image="/moonveil.png"
+            image="/moonveil.webp"
             git="https://github.com/Gaeuly/"
           />
         </div>

@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-light-pink: #f4e2ea;
-  --color-rosewood: #af7491;
-  --color-raspberry: #773957;
+  --color-light-pink: #9e7bff;
+  --color-rosewood: #893bff;
+  --color-raspberry: #842dce;
   --color-mauve-brown: #634A45;
   --color-plum-brown: #0f0c3c;
   --color-ocean: #a9bcd9;
