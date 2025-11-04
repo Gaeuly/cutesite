@@ -16,7 +16,7 @@ const GameCard = () => {
                         <div>
                             <p>Main:</p>
                             <Image
-                                src="/hero.jpg"
+                                src="/games/hero.jpg"
                                 alt="layla"
                                 width={200}
                                 height={200}
@@ -26,7 +26,7 @@ const GameCard = () => {
                         <div>
                             <p>Favourite skin:</p>
                             <Image
-                                src="/skin.jpg"
+                                src="/games/skin.jpg"
                                 alt="myskin"
                                 width={200}
                                 height={200}
@@ -39,10 +39,10 @@ const GameCard = () => {
                     <h2 className="font-bold">Minecraft</h2>
                     <p>{"A collection of houses I've built ✨"}</p>
                     <div className="flex flex-wrap gap-2 mt-2">
-                        <Image src="/mc1.png" alt="Minecraft build" width={120} height={80} className="object-cover border border-rosewood"/>
-                        <Image src="/mc2.png" alt="Minecraft base" width={120} height={80} className="object-cover border border-rosewood"/>
-                        <Image src="/mc3.png" alt="Minecraft base" width={120} height={80} className="object-cover border border-rosewood"/>
-                        <Image src="/mc4.png" alt="Minecraft base" width={120} height={80} className="object-cover border border-rosewood"/>
+                        <Image src="/games/mc1.png" alt="Minecraft build" width={120} height={80} className="object-cover border border-rosewood"/>
+                        <Image src="/games/mc2.png" alt="Minecraft base" width={120} height={80} className="object-cover border border-rosewood"/>
+                        <Image src="/games/mc3.png" alt="Minecraft base" width={120} height={80} className="object-cover border border-rosewood"/>
+                        <Image src="/games/mc4.png" alt="Minecraft base" width={120} height={80} className="object-cover border border-rosewood"/>
                     </div>
                 </div>
             </div>
