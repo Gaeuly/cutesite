@@ -61,9 +61,10 @@ const MusicPlayer = () => {
 
                 <div className="flex justify-center gap-3 items-center py-5">
                     <button onClick={handlePrev} className="px-2 py-1hover:translate-y-[2px]"> <Backward /> </button>
-                    <Play url={currentSong.url}/>
+                    <a href={currentSong.url} target="_blank" rel="noopener noreferrer" className="px-2 py-1hover:translate-y-[2px]">
+                        <Play />
+                    </a>
                     <button onClick={handleNext} className="px-2 py-1hover:translate-y-[2px]"> <Forward/> </button>
-                    
                 </div>
 
             </div>
