@@ -27,7 +27,7 @@ const Hero = () => {
             <Github className="w-8 h-8" />
           </a>
           <a
-            href="https://www.youtube.com/@dianas15"
+            href="https://www.youtube.com/@Gaeuly"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="YouTube Channel"

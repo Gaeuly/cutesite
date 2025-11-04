@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
 
-const EssaysFull = () => {
+const BlogFull = () => {
     const postsDir = path.join(process.cwd(), "content");
     const files = fs.readdirSync(postsDir);
 
@@ -22,16 +22,16 @@ const EssaysFull = () => {
 
     return (  
         <div className="max-w-2xl mx-auto px-4 flex flex-col items-center pb-24">
-            <h1 className="font-jersey font-bold text-5xl pt-24 pb-6">Essays</h1>
+            <h1 className="font-jersey font-bold text-5xl pt-24 pb-6">Blog</h1>
             <p className="font-pixelify text-center mb-12">
-                Welcome to my collection of essays! Here, because I apparently miss my English A Levels, I write about topics of interest to me. Give them a read! 🌷✨
+                Welcome to my blog! Here I write about my journey as a Discord Bot Developer and Minecraft Server Manager. 🤖⛏️
             </p>
 
             <ul className="space-y-6">
                 {posts.map((post) => (
                     <li key={post.slug} className="group relative font-pixelify"
                     >
-                        <Link href={`/essays/${post.slug}`}>
+                        <Link href={`/blog/${post.slug}`}>
                             <div className="
                             p-5 
                             border-4 border-raspberry 
@@ -44,14 +44,13 @@ const EssaysFull = () => {
                             ">
 
                             <div className="bg-raspberry text-light-pink px-2 py-1 flex items-center justify-between text-xs mb-3">
-                            <span className="font-bold">essay.txt</span>
+                            <span className="font-bold">blog_post.txt</span>
                             <div className="flex gap-1">
                                 <span className="w-3 h-3 bg-rosewood border border-plum-brown"></span>
                                 <span className="w-3 h-3 bg-light-pink border border-plum-brown"></span>
                                 <span className="w-3 h-3 bg-mauve-brown border border-plum-brown"></span>
                             </div>
                             </div>
-                                {/* Content */}
                                 <h2 className="text-xl font-bold text-raspberry group-hover:text-mauve-brown transition-colors">
                                     {post.title}
                                 </h2>
@@ -68,4 +67,4 @@ const EssaysFull = () => {
     );
 }
  
-export default EssaysFull;
+export default BlogFull;

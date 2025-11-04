@@ -14,7 +14,7 @@ export async function generateStaticParams() {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default async function Essay({ params }: any) {
+export default async function BlogPost({ params }: any) {
   const { slug } = await params;
   const filePath = path.join(process.cwd(), "content", slug + ".md");
   const fileContents = fs.readFileSync(filePath, "utf-8");
@@ -29,7 +29,7 @@ export default async function Essay({ params }: any) {
         <ReactMarkdown
           components={{
             p: ({ children }) => (
-              <p className="mb-6 leading-relaxed">{children}</p> // 👈 margin-bottom creates spacing
+              <p className="mb-6 leading-relaxed">{children}</p>
             ),
             h2: ({ children }) => (
               <h2 className="mt-10 mb-4 text-2xl font-jersey text-raspberry">

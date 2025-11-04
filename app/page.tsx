@@ -3,7 +3,7 @@
 import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Projects from "./sections/Projects";
-import Essays from "./sections/Essays";
+import Blog from "./sections/Blog";
 import Contact from "./sections/Contact";
 
 const Home = () => {
@@ -18,8 +18,8 @@ const Home = () => {
        <section id="projects">
         <Projects />
       </section>
-      <section id="essays">
-        <Essays />
+      <section id="blog">
+        <Blog />
       </section>
       <section id="contact">
         <Contact />

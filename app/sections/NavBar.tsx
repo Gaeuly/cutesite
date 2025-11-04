@@ -19,7 +19,7 @@ export default function Navbar() {
     <div className="hidden md:flex space-x-4">
       <NavButton href="#about">About</NavButton>
       <NavButton href="#projects">Projects</NavButton>
-      <NavButton href="#essays">Essays</NavButton>
+      <NavButton href="#blog">Blog</NavButton>
       <NavButton href="#contact">Contact</NavButton>
     </div>
 
@@ -54,7 +54,7 @@ export default function Navbar() {
               <ScrollLink as="span" href="#projects" onClick={() => setIsOpen(false)}>Projects</ScrollLink>
             </MenuItem>
             <MenuItem>
-              <ScrollLink as="span" href="#essays" onClick={() => setIsOpen(false)}>Essays</ScrollLink>
+              <ScrollLink as="span" href="#blog" onClick={() => setIsOpen(false)}>Blog</ScrollLink>
             </MenuItem>
             <MenuItem>
               <ScrollLink as="span" href="#contact" onClick={() => setIsOpen(false)}>Contact</ScrollLink>
